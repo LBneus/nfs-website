@@ -1,0 +1,24 @@
+.footer-container{
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .footer-message{
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70vw;
+      padding: 20px;
+      font-size: 18px;
+
+      border-top: 5px solid black;
+      border-radius: 20px;
+    }
+}

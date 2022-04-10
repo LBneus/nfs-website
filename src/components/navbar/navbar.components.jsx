@@ -2,7 +2,7 @@ import React from "react";
 
 import "./navbar.styles.scss"
 
-import { MenuItems } from "./menu-items";
+import { MenuItems } from "./menu-items.data";
 
 class Navbar extends React.Component{
 

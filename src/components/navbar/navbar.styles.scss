@@ -1,6 +1,7 @@
 .navbar-items{
-    background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);
-    // background: white;
+    // background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);
+    background: white;
+    font-weight: bold;
     height: 60px;
     display: flex;
     align-items: center;
@@ -9,7 +10,7 @@
 }
 
 .navbar-logo{
-    color: white;
+    color: black;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -21,7 +22,7 @@
     column-gap: 20px;
     list-style: none;
     text-align: center;
-    width: 90vw;
+    width: 80vw;
     
     justify-content: end;
     margin-right: 20px;
@@ -29,7 +30,7 @@
 
 .nav-links{
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 10px;
 }
 
@@ -41,7 +42,7 @@
 
 .hamburger-icon{
     display: none;
-    color: white;
+    color: black;
 }
 
 .navbar-logo-img{
@@ -68,7 +69,7 @@
     }
 
     .nav-menu.active{
-        background: #6668f4;
+        background: white;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;

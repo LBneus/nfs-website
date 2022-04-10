@@ -2,12 +2,19 @@ import react from 'react';
 
 import "./team-page.styles.scss";
 
-import Navbar from '../../components/navbar/navbar.components';
+import groupPicture from "../../images/group-picture.JPG";
+import TeamMembersList from '../../components/team-page-components/team-members-list/team-membets-list.components';
 
 const TeamPage = () => (
 
     <div className='team-page-container'>
-        <Navbar/>
+
+    <div className='group-picture-container'>
+        <img src={groupPicture} alt="pictureHere" className='group-picture'/>
+    </div>
+
+    <TeamMembersList/>
+    
     </div>
 
 )

@@ -2,10 +2,12 @@ import react from 'react';
 
 import "./team-page.styles.scss";
 
+import Navbar from '../../components/navbar/navbar.components';
+
 const TeamPage = () => (
 
     <div className='team-page-container'>
-        <h1>Hello</h1>
+        <Navbar/>
     </div>
 
 )

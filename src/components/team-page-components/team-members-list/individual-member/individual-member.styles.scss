@@ -1,0 +1,31 @@
+.individual-member-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    .individual-member-picture{
+        height: 300px;
+        width: auto;
+        border-radius: 100%;
+    }
+
+    .member-name{
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .member-linkedin-icon-container{
+        display: flex;
+        justify-content: end;
+    }
+
+    .member-bio{
+        width: 90%;
+        padding-top: 7px;
+    }
+
+}

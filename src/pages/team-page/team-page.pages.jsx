@@ -9,11 +9,11 @@ const TeamPage = () => (
 
     <div className='team-page-container'>
 
-    <div className='group-picture-container'>
-        <img src={groupPicture} alt="pictureHere" className='group-picture'/>
-    </div>
-
-    <TeamMembersList/>
+        <div className='group-picture-container'>
+            <img src={groupPicture} alt="pictureHere" className='group-picture'/>
+        </div>
+        
+        <TeamMembersList/>
     
     </div>
 

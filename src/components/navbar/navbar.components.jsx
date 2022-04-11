@@ -16,7 +16,7 @@ class Navbar extends React.Component{
         return(
             <div className="navbar-container">
                 <nav className="navbar-items">
-                    <div className="navbar-logo"> VU ISIS </div>
+                    <div className="navbar-logo">VU ISIS</div>
 
                     <div className="hamburger-icon" onClick={this.handleClick}>
                         <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>

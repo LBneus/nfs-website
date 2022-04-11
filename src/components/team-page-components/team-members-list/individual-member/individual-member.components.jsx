@@ -2,18 +2,17 @@ import React from "react";
 
 import "./individual-member.styles.scss";
 
-import myImg from "../../../../images/individual-images/LukaBuskivadze.png"
-
 
 const IndividualMember = ({IndividualMemberData}) => {
 
     const linkedinUrl = IndividualMemberData.linkedinUrl;
+    const imgUrl = IndividualMemberData.imgUrl;
     return (
         <div className="individual-member-container">
             <div className="member-name">{IndividualMemberData.firstName} {IndividualMemberData.lastName}</div>
 
             <div className='individual-member-picture-container'>
-                <img src={myImg} alt="pictureHere" className='individual-member-picture'/>
+                <img src={imgUrl} alt="pictureHere" className='individual-member-picture'/>
                 
                 <div className="member-linkedin-icon-container">
                     <a href={linkedinUrl}>

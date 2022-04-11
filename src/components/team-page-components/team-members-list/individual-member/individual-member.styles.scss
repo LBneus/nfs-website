@@ -4,12 +4,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    width: 600px;
     
     .individual-member-picture{
         height: 300px;
         width: auto;
         border-radius: 100%;
+        box-shadow: 0 0 20px 15px #a9a9a9
     }
 
     .member-name{
@@ -20,7 +22,7 @@
 
     .member-linkedin-icon-container{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
     }
 
     .member-bio{

@@ -21,11 +21,5 @@ export const MenuItems = [
         title: 'Team',
         url:'#',
         cName: 'nav-links'
-    },
-
-    {
-        title: 'Contact',
-        url:'#',
-        cName: 'nav-links'
     }
 ]

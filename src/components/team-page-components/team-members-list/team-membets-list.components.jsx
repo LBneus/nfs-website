@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 
 import { TeamMembers } from "./team-members.data";
 import IndividualMember from "./individual-member/individual-member.components";

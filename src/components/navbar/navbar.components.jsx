@@ -6,6 +6,7 @@ import ContactForm from "../contact-form/contact-form.components";
 import PopUp from "../pop-up/pop-up.components";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { MenuItems } from "./menu-items.data";
 
 const Navbar = () => {
@@ -27,17 +28,17 @@ const Navbar = () => {
                     {MenuItems.map((item, index) => {
                         return(
                             <li key={index}>
-                                <a className={item.cName} href={item.url}>
+                                <Link className={item.cName} to='/teamPage'>
                                     {item.title}
-                                </a>
+                                </Link>
                             </li>
                         )
                     })}
 
                         <li>
-                            <a className="nav-links" href="" role="button" onClick={() => setButtonPopup(true)}>
+                            <div className="nav-links" role="button" onClick={() => setButtonPopup(true)}>
                                 Contact
-                            </a>
+                            </div>
                         </li>
                     </ul>
 

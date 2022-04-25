@@ -5,17 +5,15 @@ import "./individual-member.styles.scss";
 
 const IndividualMember = ({IndividualMemberData}) => {
 
-    const linkedinUrl = IndividualMemberData.linkedinUrl;
-    const imgUrl = IndividualMemberData.imgUrl;
     return (
         <div className="individual-member-container">
-            <div className="member-name">{IndividualMemberData.firstName} {IndividualMemberData.lastName}</div>
+            <div className="member-name">{IndividualMemberData.name}</div>
 
             <div className='individual-member-picture-container'>
-                <img src={imgUrl} alt="pictureHere" className='individual-member-picture'/>
+                <img src={IndividualMemberData.mainImage.asset.url} alt="pictureHere" className='individual-member-picture'/>
                 
                 <div className="member-linkedin-icon-container">
-                    <a href={linkedinUrl}>
+                    <a href={IndividualMemberData.linkedin}>
                         <i className="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
                 </div>

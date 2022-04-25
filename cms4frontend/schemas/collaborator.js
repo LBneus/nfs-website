@@ -18,30 +18,23 @@ export default {
         },
         {
             name: 'bio',
-            title: 'Bio',
-            type: 'array',
-            of: [
-                {
-                    title: 'Block',
-                    type: 'block',
-                    styles: [{ title: 'Normal', value: 'normal' }],
-                    lists: [],
-                },
-            ],
-        }
+            title: 'bio',
+            type: 'string',
+        },
+        {
+            name: 'linkedin',
+            title: 'LinkedIn URL',
+            type: 'url',
+        },
     ],
 
     preview: {
         select: {
-            title: 'title',
-            author: 'author.name',
+            title: 'name',
             media: 'mainImage',
         },
         prepare(selection) {
-            const { author } = selection
-            return Object.assign({}, selection, {
-                subtitle: author && `by ${author}`,
-            })
+            return Object.assign({}, selection)
         },
     },
 }

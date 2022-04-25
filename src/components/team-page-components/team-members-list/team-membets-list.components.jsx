@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { TeamMembers } from "./team-members.data";
 import IndividualMember from "./individual-member/individual-member.components";
@@ -8,20 +8,22 @@ import sanityClient from './../../../client.js'
 
 const TeamMembersList = () => {
 
+    const [collaborators, setCollaborators] = useState(null)
+
     useEffect(() => {
-        sanityClient.fetch(`*[_type == "collaborator"{name, mainImage{asset->{_id, url}}, bio}`).then((data) => {
-            console.log(data)
+        sanityClient.fetch(`*[_type == "collaborator"]{name, mainImage{asset->{_id, url}}, bio}`).then((data) => {
+            console.log(data);
+            setCollaborators(data)
         }).catch(console.error)
     }, []);
+
     return(
         <div className="team-members-list-container">
-
-            {TeamMembers.map((item, index) => {
-                return(
-                    <IndividualMember key={index} IndividualMemberData={item}/>
-                )
-            })}
-
+            { collaborators ?
+                collaborators.map((collaborator, index) => (
+                    <IndividualMember key={index} IndividualMemberData={collaborator} />
+                ))
+            : <></>}
         </div>
     )
 

@@ -1,33 +1,36 @@
-.individual-member-container{
-
+.individual-member-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
-    width: 600px;
-    
-    .individual-member-picture{
-        height: 300px;
-        width: auto;
-        border-radius: 100%;
-        box-shadow: 0 0 20px 15px #a9a9a9
-    }
+    width: 40vw;
 
-    .member-name{
-        font-size: 28px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
+.individual-member-picture {
+    height: 300px;
+    width: 20vw;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 1px #a9a9a9;
+}
 
-    .member-linkedin-icon-container{
-        display: flex;
-        justify-content: flex-end;
-    }
+.member-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
-    .member-bio{
-        width: 90%;
-        padding-top: 7px;
-    }
+.member-linkedin-icon-container {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
 
+.member-bio {
+    width: 90%;
+    padding-top: 7px;
+}
+}
+
+.individual-member-container:last-child {
+    margin-bottom: 70px;
 }

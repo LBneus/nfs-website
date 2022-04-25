@@ -11,7 +11,7 @@ const TeamMembersList = () => {
     const [collaborators, setCollaborators] = useState(null)
 
     useEffect(() => {
-        sanityClient.fetch(`*[_type == "collaborator"]{name, mainImage{asset->{_id, url}}, bio}`).then((data) => {
+        sanityClient.fetch(`*[_type == "collaborator"]{name, mainImage{asset->{_id, url}}, bio, linkedin}`).then((data) => {
             console.log(data);
             setCollaborators(data)
         }).catch(console.error)

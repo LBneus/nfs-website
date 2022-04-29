@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    
 
     .div-container{
         display: flex;
@@ -18,8 +19,8 @@
         background-image: url('../../../public/images/home-page-image.png');
         background-repeat: no-repeat;
         height: auto;
-        width: 60%;
-        background-size: cover;
+        width: 50%;
+        // background-size: cover;
         background-position: center;
         height: 500px;
         margin-right: 10px;
@@ -27,7 +28,7 @@
 
     .home-page-texts{
         margin-left: 10px;
-        width: 40%;
+        width: 50%;
         .texts-header{
             font-size: 60px;
             margin-bottom: 20px;
@@ -35,13 +36,22 @@
 
         .texts-my-team-btn{
             margin-top: 20px;
-            width: 150px;
-            height: 50px;
+            width: 200px;
+            height: 60px;
             color: white;
             font-weight: bold;
             border-radius: 30px;
             border: none;
             background-color: rgb(249, 167, 67);
+            box-shadow: 0 15px 40px rgb(249 167 68 / 50%);
+        }
+
+        .texts-my-team-btn:hover{
+            cursor: pointer;
+        }
+
+        .texts-about-text{
+            font-size: 20px;
         }
     }
 

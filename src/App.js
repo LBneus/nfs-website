@@ -33,7 +33,7 @@ import Navbar from './components/navbar/navbar.components';
 import HomePage from './pages/home-page/home-page.components';
 import TeamPage from './pages/team-page/team-page.pages';
 
-// import Footer from './components/footer/footer.components';
+import Footer from './components/footer/footer.components';
 
 
 export default class App extends React.Component {

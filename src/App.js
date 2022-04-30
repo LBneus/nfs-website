@@ -3,20 +3,23 @@ import Navbar from './components/navbar/navbar.components';
 import HomePage from './pages/home-page/home-page.components';
 import TeamPage from './pages/team-page/team-page.pages';
 import Footer from './components/footer/footer.components';
-
+import GlobalStyle from './globalCSS';
 
 
 export default function App() {
     return (
         <>
             <BrowserRouter>
-                <Navbar />
+                <GlobalStyle />
+                    <Navbar />
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="teamPage" element={<TeamPage />} />
                 </Routes>
-                <Footer />
-            </BrowserRouter>
+                    <Footer />
+
+                </BrowserRouter>
+
             </>
     );
 }

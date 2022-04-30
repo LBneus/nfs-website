@@ -1,13 +1,19 @@
-.group-picture-container{
-    
+.group-picture-container {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #a9a9a97a;
     margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
-    .group-picture{        
+        .group-picture {
         height: 600px;
         width: auto;
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%
     }
 }

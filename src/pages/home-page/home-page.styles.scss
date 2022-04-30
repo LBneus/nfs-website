@@ -1,40 +1,43 @@
-.home-page-container{
+.home-page-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100%;
-    
+    margin-top: 5vh;
 
-    .div-container{
+    .div-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        width: 70%;
+        max-width: 85%;
     }
 
-
-    .home-page-picture{
-        background-image: url('../../../public/images/home-page-image.png');
-        background-repeat: no-repeat;
-        height: auto;
-        width: 50%;
-        // background-size: cover;
-        background-position: center;
-        height: 500px;
-        margin-right: 10px;
+    .home-page-picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: 0 15px;
     }
 
-    .home-page-texts{
+    .home-page-picture img {
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%
+    }
+
+    .home-page-texts {
         margin-left: 10px;
         width: 50%;
-        .texts-header{
+
+        .texts-header {
             font-size: 60px;
             margin-bottom: 20px;
         }
 
-        .texts-my-team-btn{
+        .texts-my-team-btn {
             margin-top: 20px;
             width: 200px;
             height: 60px;
@@ -46,14 +49,12 @@
             box-shadow: 0 15px 40px rgb(249 167 68 / 50%);
         }
 
-        .texts-my-team-btn:hover{
+        .texts-my-team-btn:hover {
             cursor: pointer;
         }
 
-        .texts-about-text{
+        .texts-about-text {
             font-size: 20px;
         }
     }
-
 }
-

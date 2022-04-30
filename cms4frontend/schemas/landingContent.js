@@ -1,13 +1,8 @@
 export default {
-    name: 'collaborator',
-    title: 'Collaborator',
+    name: 'landingContent',
+    title: 'Landing Page Content',
     type: 'document',
     fields: [
-        {
-            name: 'name',
-            title: 'Name',
-            type: 'string',
-        },
         {
             name: 'mainImage',
             title: 'Main image',
@@ -17,25 +12,30 @@ export default {
             },
         },
         {
-            name: 'bio',
-            title: 'bio',
+            name: 'title',
+            title: 'Title',
             type: 'string',
         },
         {
-            name: 'linkedin',
-            title: 'LinkedIn URL',
+            name: 'description',
+            title: 'Description',
             type: 'string',
         },
         {
-            name: 'index',
-            title: 'Index',
-            type: 'number',
+            name: 'button',
+            title: 'Button Title',
+            type: 'string',
+        },
+        {
+            name: 'buttonRoute',
+            title: 'Button Route',
+            type: 'string',
         }
     ],
 
     preview: {
         select: {
-            title: 'name',
+            title: 'title',
             media: 'mainImage',
         },
         prepare(selection) {

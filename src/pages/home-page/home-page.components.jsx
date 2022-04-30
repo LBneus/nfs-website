@@ -1,26 +1,40 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import sanityClient from './../../client.js'
 
 import "./home-page.styles.scss";
 
 const HomePage = () => {
 
-    return(
+    const [content, setContent] = useState(null)
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "landingContent"]{title, description, mainImage{asset->{_id, url}}, button, buttonRoute}`).then((data) => {
+            setContent(data[0])
+            console.log(data)
+        }).catch(console.error)
+    }, []);
+
+    return (
+    <>
+        {content ?
         <div className="home-page-container">
             <div className="div-container">
                 <div className='home-page-picture'>
+                    <img src={content.mainImage.asset.url}></img>
                 </div>
                 <div className="home-page-texts">
-                    <div className="texts-header">OpenData</div>
-                    <div className="texts-about-text">Our NSF project studies how data, such as camera pictures and video feeds, can be both publicly contributed and publicly maintained, and used to improve neighborhoods without unduly infringing on personal rights such as privacy. To date, this effort has been driven by governments, through CCTV and similar technology, or private companies, through devices such as doorbell cameras. In contrast, our project focuses on how areas like public safety can be enhanced through the use of data that are obtained and contributed voluntarily by individuals and publicly maintained.</div>
-                    <Link to="/teamPage">
-                        <button className="texts-my-team-btn">View Our Team</button>
+                    <div className="texts-header">{content.title}</div>
+                    <div className="texts-about-text">{content.description}</div>
+                    <Link to={content.buttonRoute}>
+                        <button className="texts-my-team-btn">{content.button}</button>
                     </Link>
                 </div>
 
             </div>
         </div>
+                : <></>}
+            </>
     )
 
 }
